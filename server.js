@@ -37,6 +37,9 @@ app.post("/", function (req, res) {
 //     res.send('hello world')
 //
 // })
+app.get('/',function(req,res){
+ res.send("Hello Everyone")
+})
 
 app.listen(port, () => {
   console.log(`Server is up at ${port}`);
