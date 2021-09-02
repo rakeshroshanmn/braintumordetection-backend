@@ -8,8 +8,8 @@ app.use(cors());
 app.post("/", function (req, res) {
   var rekognition = new AWS.Rekognition({
     region: "ap-south-1",
-    accessKeyId: "AKIAVWQWMJSREWHMQKNI",
-    secretAccessKey: "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",
+    accessKeyId: "AKIAX4MFRFGGNCBMO5FC",
+    secretAccessKey: "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",
   });
   var params = {
     Image: {
@@ -19,7 +19,7 @@ app.post("/", function (req, res) {
       },
     },
     ProjectVersionArn:
-      "arn:aws:rekognition:ap-south-1:391962709154:project/braintumordetection/version/braintumordetection.2021-08-31T12.02.17/1630391537412" /* required */,
+      "arn:aws:rekognition:ap-south-1:541982796172:project/BraintumorDetection/version/BraintumorDetection.2021-09-02T14.27.07/1630573027056" /* required */,
   };
 
   rekognition.detectCustomLabels(params, function (err, data) {
